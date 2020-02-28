@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Windows," />
 
 
 
@@ -79,12 +79,19 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Wincent 的自留地">
-<meta property="og:url" content="https://wincent98.github.io/index.html">
+<meta name="description" content="打开文件夹  C:\Users\%username%\AppData\Local\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets\  将Assets文件夹下的文件复制到一个新的路径下，路径不要有中文和空格  批量重命名，cmd运行 Ren C:\xxx\Assets\*.* *.p">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何保存Win10锁屏壁纸">
+<meta property="og:url" content="https://wincent98.github.io/2020/02/16/Save-Windows-Spotlight-Wallpapers/index.html">
 <meta property="og:site_name" content="Wincent 的自留地">
+<meta property="og:description" content="打开文件夹  C:\Users\%username%\AppData\Local\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets\  将Assets文件夹下的文件复制到一个新的路径下，路径不要有中文和空格  批量重命名，cmd运行 Ren C:\xxx\Assets\*.* *.p">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006A6xfUly1gcc8g7e1mej31hc0u0h1s.jpg">
+<meta property="article:published_time" content="2020-02-16T04:51:00.000Z">
+<meta property="article:modified_time" content="2020-02-28T09:19:57.637Z">
 <meta property="article:author" content="Wincent">
+<meta property="article:tag" content="Windows">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/006A6xfUly1gcc8g7e1mej31hc0u0h1s.jpg">
 
 
 
@@ -114,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="https://wincent98.github.io/"/>
+  <link rel="canonical" href="https://wincent98.github.io/2020/02/16/Save-Windows-Spotlight-Wallpapers/"/>
 
 
 
 
 
-  <title>Wincent 的自留地</title>
+  <title>如何保存Win10锁屏壁纸 | Wincent 的自留地</title>
   
 
 
@@ -149,8 +156,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -233,177 +239,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wincent98.github.io/2020/02/17/Request-Huawei-Cloud-API-With-Postman/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Wincent">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wincent 的自留地">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/02/17/Request-Huawei-Cloud-API-With-Postman/" itemprop="url">用Postman测试华为云在线服务API</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-17T15:51:36+08:00">
-                2020-02-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>最近华为云有个口罩佩戴识别模型开发的活动，部署模型后可以发布为服务供调用。</p>
-<p><img src="http://ww1.sinaimg.cn/large/006A6xfUly1gbzh4snxtcj30p90m3abd.jpg" alt="接口调用参数.png"></p>
-<h3 id="身份认证"><a href="#身份认证" class="headerlink" title="身份认证"></a>身份认证</h3><p>有两种方式</p>
-<ul>
-<li>Token认证</li>
-<li>AK/SK认证</li>
-</ul>
-<p>我用的是第一种Token认证的方式，另一种没测试。</p>
-<blockquote>
-<p>Token在计算机系统中代表令牌（临时）的意思，拥有Token就代表拥有某种权限。Token认证就是在调用API的时候将Token加到请求消息头，从而通过身份认证，获得操作API的权限。</p>
-</blockquote>
-<ol>
-<li><p>查看IAM地区对应的终端节点地址，如华北-北京四的是<code>iam.cn-north-4.myhuaweicloud.com</code></p>
-</li>
-<li><p>Request URL</p>
-<p>格式为：https:// <em>终端节点地址</em> / <em>API接口URI</em></p>
-<p><code>https://iam.cn-north-4.myhuaweicloud.com/v3/auth/tokens</code></p>
-</li>
-<li><p>Request Headers</p>
-<p><code>Content-Type: application/json</code></p>
-</li>
-<li><p>Request Body</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"auth"</span>: &#123;</span><br><span class="line">		<span class="attr">"identity"</span>: &#123;</span><br><span class="line">			<span class="attr">"methods"</span>: [<span class="string">"password"</span>],</span><br><span class="line">			<span class="attr">"password"</span>: &#123;</span><br><span class="line">				<span class="attr">"user"</span>: &#123;</span><br><span class="line">					<span class="attr">"name"</span>: <span class="string">"xxx"</span>,</span><br><span class="line">					<span class="attr">"password"</span>: <span class="string">"xxx"</span>,</span><br><span class="line">					<span class="attr">"domain"</span>: &#123;</span><br><span class="line">						<span class="attr">"name"</span>: <span class="string">"xxx"</span></span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;,</span><br><span class="line">		<span class="attr">"scope"</span>: &#123;</span><br><span class="line">			<span class="attr">"domain"</span>: &#123;</span><br><span class="line">				<span class="attr">"name"</span>: <span class="string">"xxx"</span></span><br><span class="line">			&#125;,</span><br><span class="line">			<span class="attr">"project"</span>:&#123;</span><br><span class="line">				<span class="attr">"name"</span>:<span class="string">"cn-north-4"</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>如果不加project这一项，则会401<code>Invalid Token header. The Token not contain project item.</code></p>
-</li>
-<li><p>在Response Headers的X-Auth-Token即为Token，24小时内有效</p>
-<p><img src="http://ww1.sinaimg.cn/large/006A6xfUly1gbzgt0yd1qj30q50n30ux.jpg" alt="image.png"></p>
-</li>
-</ol>
-<h3 id="调用服务"><a href="#调用服务" class="headerlink" title="调用服务"></a>调用服务</h3><ol>
-<li><p>Request Headers</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Content-Type:multipart&#x2F;form-data</span><br><span class="line">X-Auth-Token:xxx</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Request Body</p>
-<p><img src="http://ww1.sinaimg.cn/large/006A6xfUly1gbzh1bjql0j30kv08fjru.jpg" alt="image.png"></p>
-<p>参数类型选择File</p>
-</li>
-<li><p>结果</p>
-<p><img src="http://ww1.sinaimg.cn/large/006A6xfUly1gbzh02wtsjj30pl0crq3l.jpg" alt="image.png"></p>
-</li>
-</ol>
-<p>可以看到耗时12秒多，在华为云网站手动测试时也是要很久，但在Notebook环境下就很快，不知是何原因。</p>
-<p><a href="https://support.huaweicloud.com/iam_faq/iam_01_034.html" target="_blank" rel="noopener">参考</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -433,9 +271,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/02/16/Save-Windows-Spotlight-Wallpapers/" itemprop="url">如何保存Win10锁屏壁纸</a></h1>
+          <h1 class="post-title" itemprop="name headline">如何保存Win10锁屏壁纸</h1>
         
 
         <div class="post-meta">
@@ -485,9 +321,7 @@
       
 
       
-        
-          
-            <ol>
+        <ol>
 <li><p>打开文件夹</p>
 <p> <code>C:\Users\%username%\AppData\Local\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets\</code></p>
 </li>
@@ -499,8 +333,6 @@
 </ol>
 <p><img src="http://ww1.sinaimg.cn/large/006A6xfUly1gcc8g7e1mej31hc0u0h1s.jpg" alt="252c7a9c46b02c113b3418d864426f94acfec7eb77bb51197ecf7442767fa0e2.png"></p>
 
-          
-        
       
     </div>
     
@@ -509,6 +341,12 @@
 
     
     <div>
+      
+        <div>
+    
+        <div style="text-align:center;color:#ccc;font-size:14px;">-------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读-------------</div>
+    
+</div>
       
     </div>
 
@@ -520,143 +358,40 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wincent98.github.io/2020/01/30/My-Very-First-Article/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Wincent">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wincent 的自留地">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/01/30/My-Very-First-Article/" itemprop="url">My Very First Article</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-30T20:10:23+08:00">
-                2020-01-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/Windows/" rel="tag"># Windows</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <center>第一篇文章</center>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/01/30/My-Very-First-Article/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/01/30/My-Very-First-Article/" rel="next" title="My Very First Article">
+                <i class="fa fa-chevron-left"></i> My Very First Article
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
-    <div>
-      
-    </div>
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/02/17/Request-Huawei-Cloud-API-With-Postman/" rel="prev" title="用Postman测试华为云在线服务API">
+                用Postman测试华为云在线服务API <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -666,10 +401,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -677,6 +413,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -896,6 +636,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

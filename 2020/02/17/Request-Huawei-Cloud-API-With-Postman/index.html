@@ -79,12 +79,21 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Wincent 的自留地">
-<meta property="og:url" content="https://wincent98.github.io/index.html">
+<meta name="description" content="最近华为云有个口罩佩戴识别模型开发的活动，部署模型后可以发布为服务供调用。  身份认证有两种方式  Token认证 AK&#x2F;SK认证  我用的是第一种Token认证的方式，另一种没测试。  Token在计算机系统中代表令牌（临时）的意思，拥有Token就代表拥有某种权限。Token认证就是在调用API的时候将Token加到请求消息头，从而通过身份认证，获得操作API的权限。   查看IAM地区对应的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用Postman测试华为云在线服务API">
+<meta property="og:url" content="https://wincent98.github.io/2020/02/17/Request-Huawei-Cloud-API-With-Postman/index.html">
 <meta property="og:site_name" content="Wincent 的自留地">
+<meta property="og:description" content="最近华为云有个口罩佩戴识别模型开发的活动，部署模型后可以发布为服务供调用。  身份认证有两种方式  Token认证 AK&#x2F;SK认证  我用的是第一种Token认证的方式，另一种没测试。  Token在计算机系统中代表令牌（临时）的意思，拥有Token就代表拥有某种权限。Token认证就是在调用API的时候将Token加到请求消息头，从而通过身份认证，获得操作API的权限。   查看IAM地区对应的">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006A6xfUly1gbzh4snxtcj30p90m3abd.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006A6xfUly1gbzgt0yd1qj30q50n30ux.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006A6xfUly1gbzh1bjql0j30kv08fjru.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006A6xfUly1gbzh02wtsjj30pl0crq3l.jpg">
+<meta property="article:published_time" content="2020-02-17T07:51:36.000Z">
+<meta property="article:modified_time" content="2020-02-17T08:30:49.395Z">
 <meta property="article:author" content="Wincent">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/006A6xfUly1gbzh4snxtcj30p90m3abd.jpg">
 
 
 
@@ -114,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="https://wincent98.github.io/"/>
+  <link rel="canonical" href="https://wincent98.github.io/2020/02/17/Request-Huawei-Cloud-API-With-Postman/"/>
 
 
 
 
 
-  <title>Wincent 的自留地</title>
+  <title>用Postman测试华为云在线服务API | Wincent 的自留地</title>
   
 
 
@@ -149,8 +158,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -233,9 +241,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -265,9 +273,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/02/17/Request-Huawei-Cloud-API-With-Postman/" itemprop="url">用Postman测试华为云在线服务API</a></h1>
+          <h1 class="post-title" itemprop="name headline">用Postman测试华为云在线服务API</h1>
         
 
         <div class="post-meta">
@@ -317,9 +323,7 @@
       
 
       
-        
-          
-            <p>最近华为云有个口罩佩戴识别模型开发的活动，部署模型后可以发布为服务供调用。</p>
+        <p>最近华为云有个口罩佩戴识别模型开发的活动，部署模型后可以发布为服务供调用。</p>
 <p><img src="http://ww1.sinaimg.cn/large/006A6xfUly1gbzh4snxtcj30p90m3abd.jpg" alt="接口调用参数.png"></p>
 <h3 id="身份认证"><a href="#身份认证" class="headerlink" title="身份认证"></a>身份认证</h3><p>有两种方式</p>
 <ul>
@@ -364,8 +368,6 @@
 <p>可以看到耗时12秒多，在华为云网站手动测试时也是要很久，但在Notebook环境下就很快，不知是何原因。</p>
 <p><a href="https://support.huaweicloud.com/iam_faq/iam_01_034.html" target="_blank" rel="noopener">参考</a></p>
 
-          
-        
       
     </div>
     
@@ -374,6 +376,12 @@
 
     
     <div>
+      
+        <div>
+    
+        <div style="text-align:center;color:#ccc;font-size:14px;">-------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读-------------</div>
+    
+</div>
       
     </div>
 
@@ -387,276 +395,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wincent98.github.io/2020/02/16/Save-Windows-Spotlight-Wallpapers/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Wincent">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wincent 的自留地">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/02/16/Save-Windows-Spotlight-Wallpapers/" itemprop="url">如何保存Win10锁屏壁纸</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-16T12:51:00+08:00">
-                2020-02-16
-              </time>
+              <a href="/2020/02/16/Save-Windows-Spotlight-Wallpapers/" rel="next" title="如何保存Win10锁屏壁纸">
+                <i class="fa fa-chevron-left"></i> 如何保存Win10锁屏壁纸
+              </a>
             
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>打开文件夹</p>
-<p> <code>C:\Users\%username%\AppData\Local\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets\</code></p>
-</li>
-<li><p>将Assets文件夹下的文件复制到一个新的路径下，<strong>路径不要有中文和空格</strong></p>
-</li>
-<li><p>批量重命名，cmd运行</p>
-<p><code>Ren C:\xxx\Assets\*.* *.png</code></p>
-</li>
-</ol>
-<p><img src="http://ww1.sinaimg.cn/large/006A6xfUly1gcc8g7e1mej31hc0u0h1s.jpg" alt="252c7a9c46b02c113b3418d864426f94acfec7eb77bb51197ecf7442767fa0e2.png"></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wincent98.github.io/2020/01/30/My-Very-First-Article/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Wincent">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wincent 的自留地">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/01/30/My-Very-First-Article/" itemprop="url">My Very First Article</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-30T20:10:23+08:00">
-                2020-01-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <center>第一篇文章</center>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/01/30/My-Very-First-Article/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
-    <div>
-      
-    </div>
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -666,10 +426,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -677,6 +438,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -697,8 +462,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -749,6 +523,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#身份认证"><span class="nav-number">1.</span> <span class="nav-text">身份认证</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#调用服务"><span class="nav-number">2.</span> <span class="nav-text">调用服务</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -896,6 +686,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
